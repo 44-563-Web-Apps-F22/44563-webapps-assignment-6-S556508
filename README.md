@@ -5,7 +5,7 @@ Assignment introduction to Java Script and DOM
 [Vacation.html](vacation.html)
 
 (thttps://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-S556508/)
-[musician.htm](musician.html)
+[musician.html](musician.html)
 
 (thttps://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-S556508/)
-[discount.htm](discount.html.html)
+[discount.html](discount.html)

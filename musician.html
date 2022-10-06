@@ -5,32 +5,49 @@
 <body>
     <h1 style="text-align:center; color:darkred;">Musician guess by AdiLakshmi Meesala</h1>
 <h2 style="color:brown;"><b>Guessing Game</b></h2>
-<form>
-    <label for="form1_secret"><b>Enter the secret musician name </b></label>
-    <input type ="password" id="form1_secret" name="form1_secret" value="John Lennon"> <br>
-    <label for="form1_name"><b>Guess the musician </b></label>
-    <input type ="text" id="form1_name" name="form1_name" autofocus> <br>
-    <input type="button" onclick="checkGuess()" value="Check the guess">
-</form>
-<p id="result">We'll change this text </p>
+<hr>
+        <div class="form-label">
+            <form>
+                <label for="mus_name">Enter the secret musician name </label>
+                <input type="password" id="mus_name_1" name="mus_name_1" min=10 max=50 step=2 value="John Lennon"> <br>
+
+                <label for="guess_musc">Guess the musician </label>
+                <input type="text" id="guess_musc_1" name="guess_musc_1" autofocus> <br>
+
+                <input type="button" class="button" onclick="checkGuess()" value="Check the guess">
+            </form>
+
+
+            <p id="result">Results will be Displayed Here</p>
+        </div>
+
 <script> 
 correct = 0
 wrong = 0
-function checkGuess (){
-    console.log("Getting form values")
-    secret = document.getElementById("form1_secret").value
-    name = document.getElementById("form1_name").value    
-    out = document.getElementById("result")
-    if(secret==name){
-        alert("You got it right")
-         correct = correct+1
-        out.innerHTML = "correct answer:"+ correct +"wrong answer:"+ wrong
-    } else {
-        alert("Wrong musician")
-        wrong = wrong+1
-        out.innerHTML ="correct answer:"+ correct + "wrong answer:"+ wrong
-    }
-}
+function checkGuess() {
+            console.log("Getting form values")
+            musician_name = document.getElementById("mus_name_1").value
+            guess_musician = document.getElementById("guess_musc_1").value
+
+            out = document.getElementById("result")
+            if (musician_name === guess_musician) {
+                correct = correct + 1
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("You got it right")
+            }
+            else {
+                wrong = wrong + 1
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("Wrong Musician")
+            }
+
+            if(wrong === 3 ){
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("Sorry, game over.")
+            }
+
+
+        }
 </script>
 <div style="padding: 75px 75px"><img src="Mletterincets.png" id="bird" height="200" width="300" onclick="swapImage()">
 </div>
